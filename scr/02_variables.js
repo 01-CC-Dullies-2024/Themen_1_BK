@@ -38,3 +38,19 @@ test = true;
 console.log("Datentyp: " + typeof test);
 test = false;
 console.log("Datentyp: " + typeof test);
+
+/* 
+Variablen vs Konstanten
+ */
+
+let ok;
+ok = "okay";
+ok = "bad";
+console.log("status: " + ok);
+
+const home = 1;
+console.log("status: " + home);
+
+
+
+
