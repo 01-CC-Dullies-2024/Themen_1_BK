@@ -1,0 +1,12 @@
+{
+  "name": "themen_1_bk",
+  "version": "1.0.0",
+  "description": "Prozedurale Programmierung",
+  "main": "scr/01_hello_world.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

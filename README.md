@@ -7,4 +7,3 @@
 5. Im Ordner Datei **hello_world.js** anlegen
 6. Pfad zu "main" in **package.json** aktualisieren
 7. Ausgabe Testen ```console.log("Hello, world!)```
-
