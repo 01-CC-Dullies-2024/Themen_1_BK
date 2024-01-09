@@ -18,4 +18,9 @@ console.log(Hi);
 
 let firstName; //declaration
 firstName = "Max" //assignment
-console.log(firstName); //Ausgabe
+// console.log(firstName); //Ausgabe
+
+let famName = "Imal"; // declaration and assignment
+// console.log(famName); //Ausgabe
+
+console.log("Name: " + firstName + " " + famName); //ausgabe von var String, firstName, leerzeichen, famName
