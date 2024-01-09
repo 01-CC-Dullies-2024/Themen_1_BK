@@ -50,7 +50,3 @@ console.log("status: " + ok);
 
 const home = 1;
 console.log("status: " + home);
-
-
-
-
