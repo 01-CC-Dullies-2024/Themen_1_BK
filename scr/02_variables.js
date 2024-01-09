@@ -31,5 +31,10 @@ JS ist eine untypisierte Sprache
 */
 let test; //decl
 test = "hello";
+console.log("Datentyp: " + typeof test); // "string" mit doppelten Anführungszeichen oben
 test = 2;
-console.log("Inhalt: " + test);
+console.log("Datentyp: " + typeof test);
+test = true;
+console.log("Datentyp: " + typeof test);
+test = false;
+console.log("Datentyp: " + typeof test);
