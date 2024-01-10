@@ -2,7 +2,7 @@
   "name": "themen_1_bk",
   "version": "1.0.0",
   "description": "Prozedurale Programmierung",
-  "main": "scr/04_codechallenge_I.js",
+  "main": "src/05_wahrheitswert.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
