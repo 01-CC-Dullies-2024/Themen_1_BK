@@ -16,4 +16,4 @@ let b = parseInt(prompt ("Wie Groß ist die Zahl b? "));
 let sumab = parseInt(a+b)
 
 console.log ("Die Summe der Zahlen " + a + " und " + b + " ist " + (a+b));
-console.log ("Summe a b = " + sumab)
+console.log ("∑ab = " + sumab)
