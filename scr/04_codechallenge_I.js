@@ -48,3 +48,11 @@ Variante 1: gut Lesbar, viele Variablen
 // console.log ("Die Summe der Zahlen ist : " + summe)
 
 // sehr kompakt
+
+console.log(
+    "Die Summe ist: " +
+    (
+        parseFloat(prompt("Bitte Zahl 1 eingeben "))+
+        parseFloat(prompt("Bitte Zahl 2 eingeben "))
+    )
+);
