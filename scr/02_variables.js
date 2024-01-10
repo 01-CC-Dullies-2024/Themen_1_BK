@@ -32,19 +32,19 @@ JS ist eine untypisierte Sprache
 let test; //decl
 test = "hello";
 console.log("Datentyp: " + typeof test); // "string" mit doppelten Anführungszeichen oben
-console.log("Datentyp: " + test);
+console.log("Inhalt: " + test);
 console.log("--------------------");
 test = 2;
 console.log("Datentyp: " + typeof test);
-console.log("Datentyp: " + test);
+console.log("Inhalt: " + test);
 console.log("--------------------");
 test = true;
 console.log("Datentyp: " + typeof test);
-console.log("Datentyp: " + test);
+console.log("Inhalt: " + test);
 console.log("--------------------");
 test = false;
 console.log("Datentyp: " + typeof test);
-console.log("Datentyp: " + test);
+console.log("Inhalt: " + test);
 console.log("--------------------");
 
 /* 
@@ -59,6 +59,6 @@ console.log("status: " + ok);
 console.log("--------------------");
 
 const home = 1;
-console.log("status: " + typeof ok);
-console.log("status: " + ok);
+console.log("status: " + typeof home);
+console.log("Inhalt: " + home);
 console.log("--------------------");
