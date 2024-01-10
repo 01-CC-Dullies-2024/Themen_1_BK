@@ -11,9 +11,9 @@ Geben Sie die Summe der Zahlen in die Konsole aus:
 
 const prompt = require('prompt-sync')({sigint: true});
 
-let a = parseInt(prompt ("Wie Groß ist die Zahl a? "));
-let b = parseInt(prompt ("Wie Groß ist die Zahl b? "));
-let sumab = parseInt(a+b);
+let a = parseFloat(prompt ("Wie Groß ist die Zahl a? "));
+let b = parseFloat(prompt ("Wie Groß ist die Zahl b? "));
+let sumab = parseFloat(a+b);
 
-console.log ("Die Summe der Zahlen " + a + " und " + b + " ist " + (a+b));
+console.log ("Die Summe von " + a + " und " + b + " ist " + (a+b));
 console.log ("∑ab = " + sumab);
