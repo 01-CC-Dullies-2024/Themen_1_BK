@@ -47,16 +47,15 @@ const age =  parseInt (prompt ("Bitte Alter eingeben: ")); // "2" --> 2
 
 // console.log("Datentyp: " + typeof age + " Alter: " + age);
 
+isAgeNotNumber = (isNaN(age));
 isAgeless6 = (age < 6);
 isAgeLess13 = (age < 13);
 isAgeLess18 = (age < 18);
 isAgeless131 = (age < 131);
 
-isAgeNotNumber = typeof(age == Number(false));
-
 isNameJasper = (firstName == "Jasper");
 
-if (isAgeNotNumber) 
+if (isAgeNotNumber = true)
 {   
     {
         console.log(firstName + ", Bitte Zahl angeben! ");
