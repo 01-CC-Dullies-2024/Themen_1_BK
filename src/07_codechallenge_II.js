@@ -47,7 +47,7 @@ const age =  parseInt (prompt ("Bitte Alter eingeben: ")); // "2" --> 2
 
 // console.log("Datentyp: " + typeof age + " Alter: " + age);
 
-isAgeNotNumber = (isNaN(age));
+isAgeNotNumber = isNaN(age);
 isAgeless6 = (age < 6);
 isAgeLess13 = (age < 13);
 isAgeLess18 = (age < 18);
@@ -55,42 +55,31 @@ isAgeless131 = (age < 131);
 
 isNameJasper = (firstName == "Jasper");
 
-if (isAgeNotNumber = true)
+if (isAgeNotNumber)
 {   
-    {
         console.log(firstName + ", Bitte Zahl angeben! ");
-    }
 }
-
-if (isNameJasper) 
+else if (isNameJasper)
 {   
-    {
         console.log(firstName + " trinkt ausschließlich Monster. ");
-    }
 }
 else if (isAgeless6) 
 {
-    console.log(firstName + " trinkt Milch.")
+    console.log(firstName + " trinkt Milch.");
 }
 else if (isAgeLess13) 
 {   
-    {
         console.log(firstName + " trinkt Saft" + " oder" + " trinkt Milch.");
-    }
 }
 else if (isAgeLess18) 
 {   
-    {
         console.log(firstName + " trinkt Cola" + " oder" +  " trinkt Saft" + " oder" +  " trinkt Milch. ");
-    }
 }
 else if (isAgeless131) 
 {   
-    {
         console.log(firstName + " trinkt Wein" + " oder" +  " trinkt Cola" + " oder" +  " trinkt Saft" + " oder" +  " trinkt Milch. ");
-    }
 }
 else
 {
-    console.log("Du bist so alt geworden, du darfst alles trinken, was du willst, sogar Korn.");
+    console.log("Du bist so alt geworden, du darfst alles trinken was du willst, sogar Korn.");
 }
