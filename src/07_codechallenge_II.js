@@ -29,15 +29,15 @@ switch (true) {
         console.log(firstName + " trinkt Milch.");
         break;
     case (age >= 6) && (age <= 12):
-        console.log(firstName + " trinkt Saft.");
+        console.log(firstName + " trinkt Saft" + " oder" +  " trinkt Milch");
         break;
     case (age >= 13) && (age <= 17):
-        console.log(firstName + " trinkt Cola.");
+        console.log(firstName + " trinkt Cola" + " oder" +  " trinkt Saft" + " oder" +  " trinkt Milch");
         break;
     case (age >= 18) && (age <= 130):
-        console.log(firstName + " trinkt Wein.");
+        console.log(firstName + " trinkt Wein" + " oder" +  " trinkt Cola" + " oder" +  " trinkt Saft" + " oder" +  " trinkt Milch");
         break;   
     default:
-        console.log("Bitte Tee trinken!");   
+        console.log("Bitte Tee in den oberen Input einführen!");   
         break;
 }
