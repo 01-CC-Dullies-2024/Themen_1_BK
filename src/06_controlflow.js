@@ -38,39 +38,69 @@
 
 // Switch case 1
 
-const firstName = "Jane";
-let job;
-let fun;
+// const firstName = "Jane";
+// let job;
+// let fun;
 
-job = "driver"; // Jane fährt Taxi!
-job = "diver"; // Jane taucht im Rhein!
 
-fun = "dance"; // Jane tanzt!
-fun = "frei"; // Jane hat frei!
-fun = "" // leer
 
-switch (job) 
+// job = "driver"; // Jane fährt Taxi!
+// job = "diver"; // Jane taucht im Rhein!
+// job = "teacher"; // unterrichtet!
+// job = "instructor"; // unterrichtet!
+// job = "dozent"; // unterrichtet!
+// // job = ""; // Jane macht was für ihr Geld!
+
+// fun = "dance"; // Jane tanzt!
+// fun = "frei"; // Jane hat frei!
+// fun = "" // leer
+
+// switch (job) 
+// {
+//     case "driver":
+//         console.log (firstName + " fährt Taxi.")
+//         break;
+//     case "diver":
+//         console.log (firstName + " taucht im Rhein.")
+//         break;
+//     case "teacher", "instructor", "dozent":
+//         console.log (firstName + " unterrichtet!")
+//         break;
+//     default:
+//         console.log (firstName + " macht was für ihr Geld!") 
+//         break;
+// }
+
+// switch (fun) 
+// {
+//     case "dance":
+//         console.log (firstName + " tanzt.")
+//     break;
+//     case "frei":
+//         console.log (firstName + " hat frei.")
+//         break;
+//     default:
+//         console.log (firstName + " hat fun. ")
+//         break;
+// }
+
+/* 
+switchCase 2
+*/
+
+const cond = false;
+const value = 2;
+
+switch (cond) 
 {
-    case "driver":
-        console.log (firstName + " fährt Taxi.")
+    case (value == 1):
+        console.log ("value hat den Wert 1.")
         break;
-    case "diver":
-        console.log (firstName + " taucht im Rhein.")
+    case (value == 2):
+        console.log ("value hat den Wert 2.")
         break;
 
     default:
-        break;
-}
-
-switch (fun) 
-{
-    case "dance":
-        console.log (firstName + " tanzt.")
-    break;
-    case "frei":
-        console.log (firstName + " hat frei.")
-        break;
-    default:
-        console.log (firstName + " hat fun. ")
+        console.log ("value hat einen anderen Wert.")
         break;
 }
