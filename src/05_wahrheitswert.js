@@ -20,12 +20,19 @@ console.log("John's Age is: " + ageJohn);
 console.log("Mark's Age is: " + ageMark);
 console.log("Datum: " + date);
 
-let isJohnOlder, isJohnequal, isJohnYounger;
+let isJohnOlder, isJohnEqual, isJohnYounger;
 
 isJohnOlder = (ageJohn > ageMark);
 isJohnequal = (ageJohn == ageMark);
 isJohnYounger = (ageJohn < ageMark);
 
-console.log("Ist John älter? " + isJohnOlder("Ja", "Nein"));
-console.log("Ist John gleichalt? " + isJohnequal("Ja", "Nein"));
-console.log("Ist John jünger? " + isJohnYounger("Ja", "Nein"));
+if (isJohnOlder == true){
+  console.log("John ist älter als Mark.")
+}
+else if (isJohnEqual){
+  console.log("John ist genauso alt wie Mark.")
+}else if (isJohnYounger){
+  console.log("Mark ist älter als John.")
+}
+else ("Hier ist was falsch!")
+
