@@ -19,7 +19,11 @@ Alter 13-17 // Cola
 const prompt = require('prompt-sync')({sigint: true});
 
 const firstName = prompt ("Bitte Namen eingeben: ");
-const age =  parseInt (prompt ("Bitte Alter eingeben: ")); // "2" --> 2
+let age;
+        while (isNaN(age))
+        {
+                age =  parseInt (prompt ("Bitte Alter eingeben: "));
+        }
 
 
 // console.log(age);
@@ -47,7 +51,6 @@ const age =  parseInt (prompt ("Bitte Alter eingeben: ")); // "2" --> 2
 
 // console.log("Datentyp: " + typeof age + " Alter: " + age);
 
-isAgeNotNumber = isNaN(age);
 isAgeless6 = (age < 6);
 isAgeLess13 = (age < 13);
 isAgeLess18 = (age < 18);
@@ -55,11 +58,7 @@ isAgeless131 = (age < 131);
 
 isNameJasper = (firstName == "Jasper");
 
-if (isAgeNotNumber)
-{   
-        console.log(firstName + ", Bitte Zahl angeben! ");
-}
-else if (isNameJasper)
+if (isNameJasper)
 {   
         console.log(firstName + " trinkt ausschließlich Monster. ");
 }
