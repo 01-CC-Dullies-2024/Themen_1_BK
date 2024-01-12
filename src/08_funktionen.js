@@ -49,16 +49,33 @@ funktion
 // Postulat: one function = one job (uncle Bob)
 // SRP single responsibility principle
 
-const prompt = require('prompt-sync')({sigint: true});
-// ausgabeNamenParamsSRP("Max", " Mütze")
-ausgabeNamenParamsSRP(prompt ("Bitte Vornamen eingeben: "), prompt ("Bitte Nachnamen eingeben: ")); //Piping
+// const prompt = require('prompt-sync')({sigint: true});
+// // ausgabeNamenParamsSRP("Max", " Mütze")
+// ausgabeNamenParamsSRP(prompt ("Bitte Vornamen eingeben: "), prompt ("Bitte Nachnamen eingeben: ")); //Piping
 
-function ausgabeNamenParamsSRP(firstName, familyName)
+// function ausgabeNamenParamsSRP(firstName, familyName)
+// {
+//     // 1.Funktionalität: string composing
+//     const GAP = " ";
+//     let word = "Hallo," + GAP + firstName + GAP + familyName + "!"
+//     // 2. Funktionalität: string output
+//     console.log(word)
+// }
+// ;
+
+// exkurs 1.Funktionalität: string composition
+
+output(getString("Max", "Mütze"));
+
+function getString(firstName, familyName) 
 {
-    // 1.Funktionalität: string composing
     const GAP = " ";
-    let word = "Hallo," + GAP + firstName + GAP + familyName + "!"
-    // 2. Funktionalität: string output
-    console.log(word)
-}
-;
+    let outputStr = "Hallo," + GAP + firstName + GAP + familyName + "!"
+    return outputStr;
+    console.log ("hi") // dieser Befehl ist unerreichbarer Code! Daher ausgegraut!
+};
+
+function output(outputData) // Funktionalität als Kaspselung | function as a wrapper
+{
+    console.log(outputData);
+};
