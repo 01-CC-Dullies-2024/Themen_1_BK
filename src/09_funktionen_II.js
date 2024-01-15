@@ -13,6 +13,8 @@ const prompt = require('prompt-sync')({sigint: true});
 
 const ERR_STR_DIV = "Teilen durch Null ist nicht definiert";
 const ERR_STR_OP1 = "Rechenart ist nur: + - * / ";
+const ERR_STR_OP1_2 = "Rechenart ist auschließlich: + - * / ";
+
 const ERR_STR_isNaN = "Bitte eine Zahl eingeben: ";
 const FI_NUMBER = "Bitte erste Zahl eingeben: ";
 const SE_NUMBER = "Bitte zweite Zahl eingeben: ";
@@ -27,14 +29,7 @@ function startApp() {
 
 function isMaSy(op1) {
     switch (op1) {
-        case "+":
-        case "-":
-        case "*":
-        case "/":
-        case ":":
-            return true;
-        default:
-            return false;
+         "+"|| "-" || "*" || "/" || ":" return true;
 	}
 }
 
