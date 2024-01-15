@@ -1,4 +1,11 @@
 
+const ERR_STR_DIV = "undefined";
+const ERR_STR_OPP = "Rechenart ist nur: + - * / ";
+const ERR_STR_isNaN = "Bitte eine Zahl eingeben: ";
+const FINUMBER = "Bitte erste Zahl eingeben: "
+const SENUMBER = "Bitte zweite Zahl eingeben: "
+const CHOOP1 = "Bitte Rechenart auswählen: + - * / "
+
 
 /*** Rechner */
 /*
@@ -14,59 +21,60 @@ const prompt = require('prompt-sync')({sigint: true}); //wir brauchen prompt syn
 
 // Dateneingabe Zahl 1 + Zahl 2
 
-// const firstnumber = prompt ("Bitte erste Zahl eingeben: ");
-// let zahlA;
-//         while (isNaN(zahlA))
-//         {
-// 			zahlA =  parseInt (prompt ("Bitte eine Zahl eingeben: "));
-//         };
+const firstnumber = prompt (FINUMBER);
+let zahlA;
+        while (isNaN(zahlA))
+        {
+			zahlA =  parseInt (prompt (ERR_STR_isNaN));
+        };
 
-// const secondnumber = prompt ("Bitte zweite Zahl eingeben: ");
-// let zahlB;
-// 		while (isNaN(zahlB))
-// 		{
-// 			zahlB =  parseInt (prompt ("Bitte eine Zahl eingeben: "));
-// 		};
+const secondnumber = prompt (SENUMBER);
+let zahlB;
+		while (isNaN(zahlB))
+		{
+			zahlB =  parseInt (prompt (ERR_STR_isNaN));
+		};
+		
+const operator = prompt (CHOOP1);
+let op1;
+		while (op1 != "+" , "-", "/", "*")
+		{
+			op1 =  parseInt (prompt (ERR_STR_OPP));
+		};
 
 // Auswahl der Rechenoperation 
 // Dateneingabe
-const ERR_STR_DIV = "undefined";
-// function add //
-// output(sub)
-// output(multi)
-// output(div)
 
-
+//Testdaten 
 // output(add(2,2))
 // output(add(2,-2))
 // output(add(2,1))
-
 // output(sub(2,2))
 // output(sub(2,-2))
 // output(sub(2,1))
-
 // output(multi(2,2))
 // output(multi(2,-2))
 // output(multi(2,1))
+// output(div(4,2))
+// output(div(3,2))
+// output(div(3,-2))
+// output(div(0,2))
+// output(div(3,0))
 
-output(div(4,2))
-output(div(3,2))
-output(div(3,-2))
-output(div(0,2))
-output(div(3,0))
-
-// function add (a, b) {
-// 	return a + b ;
-// };
-
-// function sub (a, b) {
-// 	return a - b ;
-// };
-
-// function multi (a, b) {
-// 	return a * b ;
-// };
-
+// rechen funktionen add/sub/multi/div
+// funktion addition
+function add (a, b) {
+	return a + b ;
+};
+// funktion sub
+function sub (a, b) {
+	return a - b ;
+};
+// funktion multi
+function multi (a, b) {
+	return a * b ;
+};
+// funktion div
 function div (a, b) {
 	if (b == 0) {
 		return ERR_STR_DIV
@@ -75,9 +83,6 @@ function div (a, b) {
 };
 
 // module: output | test:
-// output("hello");
-// output(2);
 function output(outputData) {
 	console.log(outputData);
 };
-
