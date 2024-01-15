@@ -27,10 +27,10 @@ const prompt = require('prompt-sync')({sigint: true}); //wir brauchen prompt syn
 // 		{
 // 			zahlB =  parseInt (prompt ("Bitte eine Zahl eingeben: "));
 // 		};
-		
+
 // Auswahl der Rechenoperation 
 // Dateneingabe
-
+const ERR_STR_DIV = "undefined";
 // function add //
 // output(sub)
 // output(multi)
@@ -55,24 +55,23 @@ output(div(3,-2))
 output(div(0,2))
 output(div(3,0))
 
-function add (a, b) {
-	return a + b ;
-};
+// function add (a, b) {
+// 	return a + b ;
+// };
 
-function sub (a, b) {
-	return a - b ;
-};
+// function sub (a, b) {
+// 	return a - b ;
+// };
 
-function multi (a, b) {
-	return a * b ;
-};
+// function multi (a, b) {
+// 	return a * b ;
+// };
 
 function div (a, b) {
-	if(b !== 0) {	  //Zweig wird betreten wenn b **nicht** null ist.
-	return a / b ;
-	} else {
-		return "undefined"; }
-
+	if (b == 0) {
+		return ERR_STR_DIV
+	}
+		return a / b ;
 };
 
 // module: output | test:
@@ -80,4 +79,5 @@ function div (a, b) {
 // output(2);
 function output(outputData) {
 	console.log(outputData);
-}
+};
+
