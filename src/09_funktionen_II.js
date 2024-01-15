@@ -11,8 +11,9 @@
 //wir brauchen prompt sync zur dateneingabe // strings für prompt
 const prompt = require('prompt-sync')({sigint: true});
 
-const ERR_STR_DIV = "undefined";
+const ERR_STR_DIV = "Teilen durch Null ist nicht definiert";
 const ERR_STR_OP1 = "Rechenart ist nur: + - * / ";
+const ERR_STR_OP1_2 = "Rechenart ist ausschließlich: + - * / ";
 const ERR_STR_isNaN = "Bitte eine Zahl eingeben: ";
 const FI_NUMBER = "Bitte erste Zahl eingeben: ";
 const SE_NUMBER = "Bitte zweite Zahl eingeben: ";
@@ -22,18 +23,40 @@ const ERR_STR_GEN = "Irgendwas ging schief.";
 // App
 startApp();
 function startApp() {
-	output(calculator(getNum1, getNum2, getOp1));
+	output(calculator(getNum1(), getNum2(), getOp1()));
 };
 
-function calculator(a,b,op1) {
+function isMaSy(op1) {
 	switch (op1) {
-		case "+": {
+		case "+":	{
 			return(add(a,b))
 		}	//add()
-		case "-": {
+		case "-":	{
+			return(sub(a,b))
+		}	//sub()
+		case"*":	{
+			return(multi(a,b))
+		}	//multi()
+		case "/" , ":":	{
+			return(div(a,b))
+		}	//div()
+		case ":":	{
+			return(div(a,b))
+		}	//div()
+		default: // error
+			return ERR_STR_OP1;
+	};
+};
+
+function calculator(a,b,op1)	{
+	switch (op1) {
+		case "+":	{
+			return(add(a,b))
+		}	//add()
+		case "-":	{
 			return(sub(a,b))
 		}	//sub()	
-		case "/", ":":{
+		case "/" , ":":	{
 			return(multi(a,b))
 		}	//multi()
 		case "*":	{
@@ -41,36 +64,45 @@ function calculator(a,b,op1) {
 		}	//div()
 		default: // error
 			return ERR_STR_GEN;
-	}
-}
+	};
+};
 
-// Dateneingabe Zahl 1 + Zahl 2
+// check prompt if operator works ("+" || "-" || "/" || ":"|| "*") // does not work!
 
+// function isMaSy(op1) {
+// 	if op1 = "+" || "+" || "-" || "/" || ":"|| "*";
+// 	return op1
+
+// }
+
+// Dateneingabe
 function getNum1(){
-let a = prompt (FI_NUMBER);
-        while (isNaN(a))
+let a = prompt(FI_NUMBER);
+        while(isNaN(a))
         {
-			a =  parseInt (prompt (ERR_STR_isNaN));
+			a =  parseInt (prompt(ERR_STR_isNaN));
+			return a;
         };
 	}
 function getNum2(){
-let b = prompt (SE_NUMBER);
-		while (isNaN(b))
+let b = prompt(SE_NUMBER);
+		while(isNaN(b))
 		{
-			b =  parseInt (prompt (ERR_STR_isNaN));
+			b = parseInt(prompt(ERR_STR_isNaN));
+			return b;
 		};
 	}
+// Auswahl der Rechenoperation	
 function getOp1(){		
-let op1 = prompt (CHO_OP1);
-		while (op1 !== "+" , "-", "/", ":", "*")
+let op1 = prompt(CHO_OP1);
+		while(isMaSy())
 		{
-			op1 = prompt (ERR_STR_OP1);
+			op1 = parseInt(prompt(ERR_STR_OP1_2));
+			return op1;
 		};
 	}
-// Auswahl der Rechenoperation 
-// Dateneingabe
+//Testdaten
 
-//Testdaten 
 // output(add(2,2))
 // output(add(2,-2))
 // output(add(2,1))
