@@ -34,37 +34,46 @@ const prompt = require('prompt-sync')({sigint: true}); //wir brauchen prompt syn
 // function add //
 // output(sub)
 // output(multi)
+// output(div)
 
-output(add(2,2))
-output(add(2,-2))
-output(add(2,0))
 
-output(sub(2,2))
-output(sub(2,-2))
-output(sub(2,0))
+// output(add(2,2))
+// output(add(2,-2))
+// output(add(2,1))
 
-output(multi(2,2))
-output(multi(2,-2))
-output(multi(2,0))
+// output(sub(2,2))
+// output(sub(2,-2))
+// output(sub(2,1))
 
-function add(a, b) {
+// output(multi(2,2))
+// output(multi(2,-2))
+// output(multi(2,1))
+
+output(div(4,2))
+output(div(3,2))
+output(div(3,-2))
+output(div(0,2))
+output(div(3,0))
+
+function add (a, b) {
 	return a + b ;
-}
+};
 
-function sub(a, b) {
+function sub (a, b) {
 	return a - b ;
-}
+};
 
-function multi(a, b) {
+function multi (a, b) {
 	return a * b ;
-}
+};
 
-// // function multi
-// function multi(a, b) {
-// 	return 3
-// }
+function div (a, b) {
+	if(b !== 0) {	  //Zweig wird betreten wenn b **nicht** null ist.
+	return a / b ;
+	} else {
+		return "undefined"; }
 
-
+};
 
 // module: output | test:
 // output("hello");
