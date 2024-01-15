@@ -1,11 +1,33 @@
+const prompt = require('prompt-sync')({sigint: true}); //wir brauchen prompt sync zur dateneingabe
+
+// strings für prompt
 
 const ERR_STR_DIV = "undefined";
-const ERR_STR_OPP = "Rechenart ist nur: + - * / ";
+const ERR_STR_OP1 = "Rechenart ist nur: + - * / ";
 const ERR_STR_isNaN = "Bitte eine Zahl eingeben: ";
-const FINUMBER = "Bitte erste Zahl eingeben: "
-const SENUMBER = "Bitte zweite Zahl eingeben: "
-const CHOOP1 = "Bitte Rechenart auswählen: + - * / "
+const FI_NUMBER = "Bitte erste Zahl eingeben: ";
+const SE_NUMBER = "Bitte zweite Zahl eingeben: ";
+const CHO_OP1 = "Bitte Rechenart auswählen: + - * / ";
+const ERR_STR_GEN = "Fehler_01";
 
+function calculator(a,b,op1) {
+	switch (op1) {
+		case "+": {
+			return(add(a,b))
+		}	//add()
+		case "-": {
+			return(sub(a,b))
+		}	//sub()	
+		case "/", ":":{
+			return(multi(a,b))
+		}	//multi()
+		case "*":	{
+			return(div(a,b))
+		}	//div()
+		default: // error
+			return ERR_STR_GEN;
+	}
+}
 
 /*** Rechner */
 /*
@@ -17,29 +39,27 @@ const CHOOP1 = "Bitte Rechenart auswählen: + - * / "
 4. Ausgabe in Konsole : 
 */
 
-const prompt = require('prompt-sync')({sigint: true}); //wir brauchen prompt sync zur dateneingabe
-
 // Dateneingabe Zahl 1 + Zahl 2
 
-const firstnumber = prompt (FINUMBER);
-let zahlA;
-        while (isNaN(zahlA))
+const firstnumber = prompt (FI_NUMBER);
+let a;
+        while (isNaN(a))
         {
-			zahlA =  parseInt (prompt (ERR_STR_isNaN));
+			a =  parseInt (prompt (ERR_STR_isNaN));
         };
 
-const secondnumber = prompt (SENUMBER);
-let zahlB;
-		while (isNaN(zahlB))
+const secondnumber = prompt (SE_NUMBER);
+let b;
+		while (isNaN(b))
 		{
-			zahlB =  parseInt (prompt (ERR_STR_isNaN));
+			b =  parseInt (prompt (ERR_STR_isNaN));
 		};
 		
-const operator = prompt (CHOOP1);
+const operator = prompt (CHO_OP1);
 let op1;
-		while (op1 != "+" , "-", "/", "*")
+		while (op1 != "+" , "-", "/", ":", "*")
 		{
-			op1 =  parseInt (prompt (ERR_STR_OPP));
+			op1 =  parseInt (prompt (ERR_STR_OP1));
 		};
 
 // Auswahl der Rechenoperation 
