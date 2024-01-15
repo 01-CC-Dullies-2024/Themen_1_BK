@@ -1,6 +1,7 @@
 /* 
 funktion
 */
+const prompt = require('prompt-sync')({sigint: true});
 
 // funkionsaufruf | call
 
@@ -18,7 +19,7 @@ funktion
 // function ausgabeNamen()
 
 // {
-//     let firstName = prompt ("Bitte Namen eingeben: "); // Dieser Aufruf ist rekursiv
+//     let firstName = prompt ("Bitte Namen eingeben: "); // Diese deklaration ist rekursiv
 //     console.log("Hallo Du da, " + firstName +"!");
 // }
 
@@ -35,7 +36,6 @@ funktion
 // console.log("Hallo, "+ firstName + "!")
 // }
 
-// const prompt = require('prompt-sync')({sigint: true});
 // ausgabeNamenParams(prompt ("Bitte Vornamen eingeben: "), prompt ("Bitte Nachnamen eingeben: ")); //Piping
 
 // function ausgabeNamenParams(firstName, familyName)
@@ -50,7 +50,7 @@ funktion
 // SRP single responsibility principle
 
 // const prompt = require('prompt-sync')({sigint: true});
-// // ausgabeNamenParamsSRP("Max", " Mütze")
+// ausgabeNamenParamsSRP("Max", " Mütze")
 // ausgabeNamenParamsSRP(prompt ("Bitte Vornamen eingeben: "), prompt ("Bitte Nachnamen eingeben: ")); //Piping
 
 // function ausgabeNamenParamsSRP(firstName, familyName)
@@ -65,17 +65,17 @@ funktion
 
 // exkurs 1.Funktionalität: string composition
 
-output(getString("Max", "Mütze"));
+// output(getString("Max", "Mütze"));
 
-function getString(firstName, familyName) 
-{
-    const GAP = " ";
-    let outputStr = "Hallo," + GAP + firstName + GAP + familyName + "!"
-    return outputStr;
-    console.log ("hi") // dieser Befehl ist unerreichbarer Code! Daher ausgegraut!
-};
+// function getString(firstName, familyName) 
+// {
+//     const GAP = " ";
+//     let outputStr = "Hallo," + GAP + firstName + GAP + familyName + "!"
+//     return outputStr;
+//     console.log ("hi") // dieser Befehl ist unerreichbarer Code! Daher ausgegraut!
+// };
 
-function output(outputData) // Funktionalität als Kaspselung | function as a wrapper
-{
-    console.log(outputData);
-};
+// function output(outputData) // Funktionalität als Kaspselung | function as a wrapper
+// {
+//     console.log(outputData);
+// };
