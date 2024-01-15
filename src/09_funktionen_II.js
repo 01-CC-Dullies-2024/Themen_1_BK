@@ -1,4 +1,4 @@
-/*** Rechner */
+/*** Rechner ***/
 /*
 0. a+b | a-b | a*b | a/b  --> Ergebnis c 
 
@@ -8,9 +8,8 @@
 4. Ausgabe in Konsole : 
 */
 
-//wir brauchen prompt sync zur dateneingabe
+//wir brauchen prompt sync zur dateneingabe // strings für prompt
 const prompt = require('prompt-sync')({sigint: true});
-// strings für prompt
 
 const ERR_STR_DIV = "undefined";
 const ERR_STR_OP1 = "Rechenart ist nur: + - * / ";
@@ -21,9 +20,10 @@ const CHO_OP1 = "Bitte Rechenart auswählen: + - * / : ";
 const ERR_STR_GEN = "Irgendwas ging schief.";
 
 // App
-// function startApp() {
-// 	startApp(calculator(3,2,"+"))
-// }
+startApp();
+function startApp() {
+	output(calculator(getNum1, getNum2, getOp1));
+};
 
 function calculator(a,b,op1) {
 	switch (op1) {
@@ -46,27 +46,27 @@ function calculator(a,b,op1) {
 
 // Dateneingabe Zahl 1 + Zahl 2
 
-const firstnumber = prompt (FI_NUMBER);
-let a;
+function getNum1(){
+let a = prompt (FI_NUMBER);
         while (isNaN(a))
         {
 			a =  parseInt (prompt (ERR_STR_isNaN));
         };
-
-const secondnumber = prompt (SE_NUMBER);
-let b;
+	}
+function getNum2(){
+let b = prompt (SE_NUMBER);
 		while (isNaN(b))
 		{
 			b =  parseInt (prompt (ERR_STR_isNaN));
 		};
-		
-const operator = prompt (CHO_OP1);
-let op1;
+	}
+function getOp1(){		
+let op1 = prompt (CHO_OP1);
 		while (op1 !== "+" , "-", "/", ":", "*")
 		{
-			op1 = String(prompt (ERR_STR_OP1));
+			op1 = prompt (ERR_STR_OP1);
 		};
-
+	}
 // Auswahl der Rechenoperation 
 // Dateneingabe
 
