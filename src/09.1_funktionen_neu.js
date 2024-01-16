@@ -8,17 +8,19 @@ const FI_NUMBER = "Bitte erste Zahl eingeben: ";
 const SE_NUMBER = "Bitte zweite Zahl eingeben: ";
 const CHO_OP1 = "Bitte Rechenart auswählen: + - * / : ";
 
-// App
+// module App
 startApp();
 
 function startApp() {
     output(calculator(getNum1(), getNum2(), getOp1()));
 }
 
+// module check op1 prompt
 function isMaSy(op1) {
-    return op1 === "+" || op1 === "-" || op1 === "*" || op1 === "/";
+    return op1 === "+" || op1 === "-" || op1 === "*" || op1 === "/" || op1 === ":";
 }
 
+// module calculator
 function calculator(a, b, op1) {
     switch (op1) {
         case "+":
@@ -34,7 +36,7 @@ function calculator(a, b, op1) {
             return ERR_STR_OP1_2;
     }
 }
-
+// module get from prompt
 function getNum1() {
     let a = parseFloat(prompt(FI_NUMBER));
     while (isNaN(a)) {
@@ -59,6 +61,7 @@ function getOp1() {
     return op1;
 }
 
+// module math operator: add, sub, multi, div
 function add(a, b) {
     return a + b;
 }
@@ -77,7 +80,7 @@ function div(a, b) {
     }
     return a / b;
 }
-
+// module output
 function output(outputData) {
     console.log(outputData);
 }
