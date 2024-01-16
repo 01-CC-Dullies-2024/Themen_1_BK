@@ -22,7 +22,7 @@ const INFO_STR_POST_NUM = " number: ";
 /** Variable (Global)*/
 let isNotAborted; 
 
-// application / App
+// application
 startApp();
 function startApp() {
     let num1,num2,op;
@@ -37,31 +37,25 @@ function startApp() {
     } else{
         output(ERROR_STR_ABORT);
     }
-}
+};
 
-// module: data input | test:
-//  output(getNumber("1st"));
+// module: data input
 function getNumber(figure) {
 
     let displayStr = INFO_STR_PRE_NUM + figure + INFO_STR_POST_NUM;
     let inputStr = prompt(displayStr) 
     let num = parseInt(inputStr);
-
-   
     // if num is NOT a number AND user DIDN'T click at Abbrechen
      while (isNaN(num) && (inputStr !== null)) {
         inputStr =  prompt(displayStr);
         num = parseInt(inputStr); 
     }
-    
     // if this is aborted, ALL gets aborted ...
     if(inputStr == null){isNotAborted = false;}
-    return num;
-        
-}
+    return num;  
+};
 
-// module: input operator | Test:
-// output(getOp());
+// module: input operator
 function getOp() {
 
     let op = prompt(INFO_STR_OP); 
@@ -72,29 +66,14 @@ function getOp() {
 
     if (op == null){isNotAborted = false;}
     return op;
-}
+};
 
-// module: check operator | Test:
-// agreement : "+","-","*",":","/"
-// output(isOpNotValid("+"));
-// output(isOpNotValid("-"));
-// output(isOpNotValid("*"));
-// output(isOpNotValid(":"));
-// output(isOpNotValid("/"));
-// output(isOpNotValid("#?#"));
-// output(isOpNotValid(""));
+// module: check operator
 function isOpNotValid(op) {
     return op != "+" && op != "-" && op != "*" && op != ":" && op != "/";
-}
+};
 
-// module: calculator | tests:
-// agreement : "+","-","*",":"
-// output(calculator(2,2,"+"));
-// output(calculator(2,2,"-"));
-// output(calculator(2,2,"*"));
-// output(calculator(2,2,":"));
-// output(calculator(2,0,"/"));
-// output(calculator(2,2,"#?!"));
+// module: calculator
 function calculator(a,b,op) {
     switch (op) {
         case "+": // addition
@@ -109,47 +88,29 @@ function calculator(a,b,op) {
         default:  // Error ...
             return ERROR_STR_GEN;
     }
-}
+};
 
-// module: division a / b |  test:
-// output(divide(2,3));
-// output(divide(2,-3));
-// output(divide(2,0));
-// output(divide(0,2));
+// module: division a / b
 function divide(a,b) {
     if (b == 0) {
         return ERROR_STR_DIV; 
     }
     return a / b; 
- }
-
-// module: multiplication a * b |  test:
-// output(multiply(2,3));
-// output(multiply(2,-3));
-// output(multiply(2,0));
+};
+// module: multiplication a * b
 function multiply(a,b) {
     return a * b; 
- }
-
-// module: subtraction a - b |  test:
-// output(subtract(2,3));
-// output(subtract(2,-3));
-// output(subtract(2,0));
+};
+// module: subtraction a - b
 function subtract(a,b) {
     return a - b; 
- }
- 
-// module: addition a + b |  test:
-// output(add(2,3));
-// output(add(2,-3));
-// output(add(2,0));
+};
+ // module: addition a + b
 function add(a,b) {
    return a + b; 
-}
+};
 
 // module: console output | test:
-// output("hello");
-// output(2);
 function output(outputData) {
    //console.log(typeof outputData);
     if (typeof outputData == "number") {
@@ -157,4 +118,4 @@ function output(outputData) {
     } else {
         console.log(outputData); 
     }
-}
+};
