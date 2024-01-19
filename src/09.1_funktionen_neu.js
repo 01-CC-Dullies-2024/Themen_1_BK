@@ -36,6 +36,7 @@ function calculator(a, b, op1) {
             return ERR_STR_OP1_2;
     }
 }
+
 // module get from prompt
 function getNum1() {
     let a = parseFloat(prompt(FI_NUMBER));

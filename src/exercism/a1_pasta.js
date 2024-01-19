@@ -6,16 +6,16 @@ console.log(EXPECTED_MINUTES_IN_OVEN);
 
 // 2.task: remainingMinutesInOven
 
-// let actualMinutesInOven;
-// function remainingMinutesInOven(actualMinutesInOven) {
-//   actualMinutesInOven = 10;
-//   return Number(EXPECTED_MINUTES_IN_OVEN - actualMinutesInOven);
-// };
-
-function getsparetime(actualMinutesInOven) {
-  actualMinutesInOven =10;
+let actualMinutesInOven;
+function remainingMinutesInOven(actualMinutesInOven) {
+let actualMinutesInOven = 10;
   return Number(EXPECTED_MINUTES_IN_OVEN - actualMinutesInOven);
 };
+
+// function getsparetime(actualMinutesInOven) {
+//   actualMinutesInOven =10;
+//   return Number(EXPECTED_MINUTES_IN_OVEN - actualMinutesInOven);
+// };
 
 console.log(getsparetime());
 // console.log(actualMinutesInOven);
