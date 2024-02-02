@@ -2,7 +2,7 @@
 // arr =["Ich", "bin", "Max"];
 
 // output(arr);
-// // output(arr[0][0]+ "" + arr[1][2]);
+// output(arr[0][0]+ "" + arr[1][2]);
 // output("-----------------");
 
 // // nested loop
@@ -16,15 +16,15 @@
 
 /***** Objekte 1 Daten/Funktionen *******/
 
-// let person =    {
-//                 firstName: "Ben",
-//                 familyName: "K2hn",
-//                 salary: [120000, 160000],
-//                 permission: true,
-//                 sayHello: function() {
-//                     return TXT; // Aufrufe von Innen können über this. erfolgen //
-//                 },
-//                 };
+let person =    {
+                firstName: "Ben",
+                familyName: "K2hn",
+                salary: [120000, 160000],
+                permission: true,
+                sayHello: function() {
+                    return TXT; // Aufrufe von Innen können über this. erfolgen //
+                },
+                };
 
 // output(person);
 // output(person.firstName);
@@ -43,19 +43,19 @@
 // deep - deeper - deepest
 // nested object {{{}}}
 
-let baikal = {
-    value: "10m",
-    deep: {
-        deeper: {
-            temperatur: "4 Grad Celsius",
-            deepest: "Das Licht - auf 1642m!",
-        },
-    },
+// let baikal = {
+//     value: "10m",
+//     deep: {
+//         deeper: {
+//             temperatur: "4 Grad Celsius",
+//             deepest: "Das Licht - auf 1642m!",
+//         },
+//     },
 
-};
+// };
 
-output(baikal.deep.deeper.temperatur);
-output(baikal.deep.deeper.deepest);
+// output(baikal.deep.deeper.temperatur);
+// output(baikal.deep.deeper.deepest);
 // // Modul: Ausgabe | Test
 //output("hi");
 function output(outputData) {

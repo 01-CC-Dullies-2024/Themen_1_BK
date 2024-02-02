@@ -2,7 +2,7 @@
     <stamm>
         <ast></ast>
             <zweig>
-                <blatt>
+                <blatt> colors = "green"
                 </blatt>
             </zweig>
         <ast></ast>
